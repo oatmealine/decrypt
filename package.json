@@ -1,7 +1,7 @@
 {
-  "name": "decrypt",
+  "name": "decrypterexe",
   "version": "1.0.0",
-  "description": "a hacknet-inspired file encrypter and decryptor",
+  "description": "a hacknet-inspired file encrypter and decrypter",
   "main": "main.js",
   "dependencies": {
     "eslint": "^5.13.0"
