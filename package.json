@@ -1,0 +1,22 @@
+{
+  "name": "decrypt",
+  "version": "1.0.0",
+  "description": "a hacknet-inspired file encrypter and decryptor",
+  "main": "main.js",
+  "dependencies": {
+    "eslint": "^5.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"none\" && exit 0"
+  },
+  "keywords": [
+    "hacknet",
+    "nodejs",
+    "encrypt",
+    "decrypt",
+    "security"
+  ],
+  "author": "thefox & Genesis",
+  "license": "MIT"
+}
