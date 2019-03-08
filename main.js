@@ -1,30 +1,17 @@
 "use strict";
 
 String.prototype.hashCode = function() {
-	var hash = 0, i, chr;
-	if (this.length === 0) return hash;
+	let n = 0;
 	for (i = 0; i < this.length; i++) {
-		chr   = this.charCodeAt(i);
-		hash  = ((hash << 5) - hash) + chr;
-		hash |= 0; // Convert to 32bit integer
-	}
-	return hash;
+		n = (n << 5) - n + this.charCodeAt(i);
+	} 
+	return n;
+	//this is the same method that mono uses for hashing strings
 };
 
 const Decryption = {
 	"getPassCode": function(string) {
-		// grab a number as the result
-		let result = 0;
-
-		string = new String(string);
-
-		// run this "conversion" for each character, that way its almost impossible to decode the password
-		for (let i = 0; i < string.length; i++) {
-			// add the char code of the character to the result
-			result = result + string.charCodeAt(i);
-		}
-
-		return result * (1 + string.charCodeAt(0));
+		return string.hashCode()
 	},
 
 	"encryptString": function(data, header, ipLink, password = "", fileExtension = null) {
